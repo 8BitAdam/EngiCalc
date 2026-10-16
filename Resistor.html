@@ -202,7 +202,7 @@
           e12.forEach(mult=>{
             const v = mult * Math.pow(10,exp);
             const diff = Math.abs(v-raw);
-            if(diff < best.diff){ best={diff,v}; }
+            if(diff < best.diff){ best={diff, val:v}; }
           });
         }
         e12El.textContent = best.val.toLocaleString()+ ' Ω (Δ '+Math.round(best.diff)+' Ω)';
